@@ -1,16 +1,19 @@
 /**
  * データキー
  */
-const KEY_ID = "id";
-const KEY_NAME = "name";
-const KEY_PHONETIC = "phonetic";
-const KEY_DISPATCH = "dispatch";
-const KEY_POSITION = "position";
-const KEY_MAIL = "mail";
-const KEY_PHN = "phone";
-const KEY_BIRTH = "birth";
-const KEY_FIELD = "field";
-const KEY_PERSONAL = "personal";
+const colum = {
+    ID:"id",                // 社員番号
+    NAME:"name",            // 名前
+    PHONETIC:"phonetic",    // ふりがな
+    WORK:"working",    　　　// 稼働先
+    POSITION:"position",    // 役職
+    MAIL:"mail",            // メールアドレス
+    PHN:"phone",            // 電話番号
+    BIRTH:"birth",          // 誕生日
+    FIELD:"field",          // 分野
+    PHOTO:"photo"           // 写真
+
+};
 
 /**
  * 分野
@@ -23,14 +26,17 @@ const field = {
     O:"4"
 };
 
+/**
+ * 役職
+ */
 const position = {
-    MGR:"0",
-    CHF:"1",
-    GL:"2",
-    TM:"3",
-    STM:"4",
-    BS:"5",
-    S:"6"
+    MGR:"0",    // 部長
+    CHF:"1",    // 所長
+    GL:"2",     // 課長
+    TM:"3",     // 技術マネージャ
+    STM:"4",    // サブ技術マネージャ
+    BS:"5",     // ブリッジスタッフ
+    S:"6"       // 社員
 };
 
 /**
@@ -87,17 +93,17 @@ const birth_place = [
 ];
 
 var TEST_DATA = {
-                 "0000001":{KEY_ID:"0000001",KEY_NAME:"川島永嗣",KEY_PHONETIC:"あああああ",KEY_POSITION:position.MGR,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"0",KEY_FIELD:field.M},
-                 "0000002":{KEY_ID:"0000002",KEY_NAME:"西川周作",KEY_PHONETIC:"いいいいい",KEY_POSITION:position.CHF,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"2",KEY_FIELD:field.C},
-                 "0000003":{KEY_ID:"0000003",KEY_NAME:"林彰洋",KEY_PHONETIC:"ううううう",KEY_POSITION:position.GL,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"4",KEY_FIELD:field.E},
-                 "0000004":{KEY_ID:"0000004",KEY_NAME:"長友佑都",KEY_PHONETIC:"えええええ",KEY_POSITION:position.TM,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"6",KEY_FIELD:field.O},
-                 "0000005":{KEY_ID:"0000005",KEY_NAME:"槙野智章",KEY_PHONETIC:"おおおおお",KEY_POSITION:position.STM,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"8",KEY_FIELD:field.S},
-                 "0000006":{KEY_ID:"0000006",KEY_NAME:"森重真人",KEY_PHONETIC:"かかかかか",KEY_POSITION:position.S,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"10",KEY_FIELD:field.C},
-                 "0000007":{KEY_ID:"0000007",KEY_NAME:"吉田麻也",KEY_PHONETIC:"ききききき",KEY_POSITION:position.S,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"12",KEY_FIELD:field.E},
-                 "0000008":{KEY_ID:"0000008",KEY_NAME:"酒井宏樹",KEY_PHONETIC:"くくくくく",KEY_POSITION:position.S,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"14",KEY_FIELD:field.M},
-                 "0000009":{KEY_ID:"0000009",KEY_NAME:"酒井高徳",KEY_PHONETIC:"けけけけけ",KEY_POSITION:position.S,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"16",KEY_FIELD:field.O},
-                 "0000010":{KEY_ID:"0000010",KEY_NAME:"昌子源",KEY_PHONETIC:"ここここここ",KEY_POSITION:position.BS,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"18",KEY_FIELD:field.S},
-                 "0000011":{KEY_ID:"0000011",KEY_NAME:"植田直通",KEY_PHONETIC:"さささささ",KEY_POSITION:position.S,KEY_MAIL:"aaaa@alpsgiken.co.jp",KEY_PHN:"000-0000-0000",KEY_BIRTH:"20",KEY_FIELD:field.C}
+                 "0000001":{"id":"0000001","name":"川島永嗣","phonetic":"あああああ","position":position.MGR,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"0","field":field.M},
+                 "0000002":{"id":"0000002","name":"西川周作","phonetic":"いいいいい","position":position.CHF,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"2","field":field.C},
+                 "0000003":{"id":"0000003","name":"林彰洋","phonetic":"ううううう","position":position.GL,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"4","field":field.E},
+                 "0000004":{"id":"0000004","name":"長友佑都","phonetic":"えええええ","position":position.TM,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"6","field":field.O},
+                 "0000005":{"id":"0000005","name":"槙野智章","phonetic":"おおおおお","position":position.STM,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"8","field":field.S},
+                 "0000006":{"id":"0000006","name":"森重真人","phonetic":"かかかかか","position":position.S,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"10","field":field.C},
+                 "0000007":{"id":"0000007","name":"吉田麻也","phonetic":"ききききき","position":position.S,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"12","field":field.E},
+                 "0000008":{"id":"0000008","name":"酒井宏樹","phonetic":"くくくくく","position":position.S,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"14","field":field.M},
+                 "0000009":{"id":"0000009","name":"酒井高徳","phonetic":"けけけけけ","position":position.S,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"16","field":field.O},
+                 "0000010":{"id":"0000010","name":"昌子源","phonetic":"ここここここ","position":position.BS,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"18","field":field.S},
+                 "0000011":{"id":"0000011","name":"植田直通","phonetic":"さささささ","position":position.S,mail:"aaaa@alpsgiken.co.jp",phone:"000-0000-0000","birth":"20","field":field.C}
                  };
 
 /**
