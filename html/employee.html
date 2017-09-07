@@ -12,6 +12,7 @@
         <script type="text/javascript" src="../lib/jquery-3.2.0.min.js"></script>
         <script type="text/javascript" src="../lib/masonry.pkgd.min.js"></script>
         <script type="text/javascript" src="../lib/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="../js/employee-list.js"></script>
         <script type="text/javascript">
             $(function(){
                 var $container = $('#container');
@@ -40,45 +41,10 @@
         <div id="contents">
             <div class="inner">
                 <div id="container">
-                    <div class="item"><img src="../img/person_default.png"/>
-                        <p class="personal">No:0000000</p>
-                        <p class="personal">Name:xxxxxxxxxx</p>
-                    </div>
-                    <div class="item x2"><img src="../img/person.jpg"/>
-                        <p class="personal">No:0000001</p>
-                        <p class="personal">Name:xxxxxxxxxx</p>
-                    </div>
-
-                    <div class="item"><img src="../img/person.jpg"/>
-                        <p class="personal">No:0000002</p>
-                        <p class="personal">Name:xxxxxxxxxx</p>
-                    </div>
-
-                    <div class="item x2"><img src="../img/person_default.png"/>
-                        <p class="personal">No:0000003</p>
-                        <p class="personal">Name:xxxxxxxxxx</p>
-                    </div>
-
-                    <div class="item"><img src="../img/person_default.png"/>
-                        <p class="personal">No:0000004</p>
-                        <p class="personal">Name:xxxxxxxxxx</p>
-                    </div>
-                    <div class="item"><img src="../img/person_default.png"/>
-                        <p class="personal">No:0000005</p>
-                        <p class="personal">Name:xxxxxxxxxx</p>
-                    </div>
-                    <div class="item"><img src="../img/person_default.png"/>
-                        <p class="personal">No:0000006</p>
-                        <p class="personal">Name:xxxxxxxxxx</p>
-                    </div>
-                    <div class="item"><img src="../img/person_default.png"/>
-                        <p class="personal">No:0000007</p>
-                        <p class="personal">Name:xxxxxxxxxx</p>
-                    </div>
-                    <div class="item"><img src="../img/person_default.png"/>
-                        <p class="personal">No:0000008</p>
-                        <p class="personal">Name:xxxxxxxxxx</p>
-                    </div>
+                    <!-- list area -->
+                    <script type="text/javascript">
+                        createList();
+                    </script>
                 </div>
             </div>
         </div>
