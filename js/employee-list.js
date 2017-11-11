@@ -9,6 +9,7 @@ function createList() {
         var div = document.createElement('div');
 
         div.className = "item";
+        div.id = key;
         if (employeeData[key][colum.POSITION] === position.MGR) {
             div.className += " x3";
         } else if (employeeData[key][colum.POSITION] === position.CHF ||
@@ -25,5 +26,10 @@ function createList() {
         div.innerHTML += '<p class="personal">Name:' + employeeData[key][colum.NAME] + '</p>';
         var target = document.getElementById('container');
         target.appendChild(div);
+
+        // 社員情報が押されたときの動作
+        $("#"+ div.id).click(function() {
+            showEmployeeDetails(this.id);
+        });
     }
 }
