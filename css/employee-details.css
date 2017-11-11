@@ -1,0 +1,35 @@
+.details {
+    border: solid 8px red;
+    box-sizing: border-box;
+
+    /* レイアウト配置用 */
+    overflow: hidden;
+}
+
+.details .img{
+    border-color: blueviolet;
+
+    /* レイアウト配置用 */
+    float: left;
+}
+
+.details .personal{
+    border-color: coral;
+
+    /* レイアウト配置用 */
+    overflow: hidden;
+}
+
+.details .personal p{
+/*    float: left;*/
+    margin: 8px;
+    border-bottom: solid;
+    border-bottom-color: cadetblue;
+}
+
+.details p.personal {
+/*    margin: 5px;*/
+    font-size: 16px;
+/*    text-decoration: underline*/
+
+}
