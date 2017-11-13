@@ -30,11 +30,11 @@ function showEmployeeDetails(key) {
     divPersonal.innerHTML += '<p class="personal">Name: ' + employeeData[key][colum.NAME] + '</p>';
     divPersonal.innerHTML += '<p class="personal">Phonetic: ' + employeeData[key][colum.PHONETIC] + '</p>';
     divPersonal.innerHTML += '<p class="personal">Working: ' + employeeData[key][colum.WORK] + '</p>';
-    divPersonal.innerHTML += '<p class="personal">Position: ' + employeeData[key][colum.POSITION] + '</p>';
+    divPersonal.innerHTML += '<p class="personal">Position: ' + position_label[employeeData[key][colum.POSITION]] + '</p>';
     divPersonal.innerHTML += '<p class="personal">Email: ' + employeeData[key][colum.MAIL] + '</p>';
     divPersonal.innerHTML += '<p class="personal">Phone: ' + employeeData[key][colum.PHN] + '</p>';
     divPersonal.innerHTML += '<p class="personal">Birth: ' + birth_place[employeeData[key][colum.BIRTH]] + '</p>';
-    divPersonal.innerHTML += '<p class="personal">Field: ' + employeeData[key][colum.FIELD] + '</p>';
+    divPersonal.innerHTML += '<p class="personal">Field: ' + field_label[employeeData[key][colum.FIELD]] + '</p>';
     divDetail.appendChild(divPersonal);
 
     $("#details").dialog({
