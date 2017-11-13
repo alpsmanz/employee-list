@@ -33,7 +33,7 @@ function showEmployeeDetails(key) {
     divPersonal.innerHTML += '<p class="personal">Position: ' + employeeData[key][colum.POSITION] + '</p>';
     divPersonal.innerHTML += '<p class="personal">Email: ' + employeeData[key][colum.MAIL] + '</p>';
     divPersonal.innerHTML += '<p class="personal">Phone: ' + employeeData[key][colum.PHN] + '</p>';
-    divPersonal.innerHTML += '<p class="personal">Birth: ' + employeeData[key][colum.BIRTH] + '</p>';
+    divPersonal.innerHTML += '<p class="personal">Birth: ' + birth_place[employeeData[key][colum.BIRTH]] + '</p>';
     divPersonal.innerHTML += '<p class="personal">Field: ' + employeeData[key][colum.FIELD] + '</p>';
     divDetail.appendChild(divPersonal);
 
