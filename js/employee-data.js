@@ -26,13 +26,13 @@ const field = {
     O:"4"
 };
 
-const field_label = {
+const field_label = [
     "メカ",
     "エレキ",
     "ソフト",
     "化学",
     "業務"
-};
+];
 
 /**
  * 役職
@@ -47,7 +47,7 @@ const position = {
     S:"6"       // 社員
 };
 
-const position_label = {
+const position_label = [
     "部長",
     "所長",
     "課長",
@@ -55,7 +55,7 @@ const position_label = {
     "サブ技術マネージャ",
     "ブリッジスタッフ",
     "社員"
-};
+];
 
 /**
  * 出身地
