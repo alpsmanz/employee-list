@@ -47,6 +47,9 @@ function showEmployeeDetails(key) {
             delay: 10,
             duration: 500
         },
+        open: function(event, ui){
+            $(".ui-dialog-titlebar-close").hide();
+        },
         buttons: { //ボタン
             "閉じる": function() {
                 var div = document.getElementById("detail_info");
