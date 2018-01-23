@@ -53,6 +53,7 @@ function showEmployeeDetails(key) {
                 this.removeChild(div);
                 $(this).dialog("close");
             }
-        }
+        },
+        open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
     });
 }
